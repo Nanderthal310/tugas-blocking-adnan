@@ -1,0 +1,1044 @@
+/* ==========================================================================
+   JapaLink - Official Stylesheet (Bootstrap 4 Custom Extensions & Aesthetics)
+   Pixel-accurate matching of Figma designs with modern Japanese proxy aesthetics
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --jl-primary-orange: #ff9a23;
+  --jl-primary-dark-orange: #ff7800;
+  --jl-accent-red: #eb4d4b;
+  --jl-accent-blue: #1565c0;
+  --jl-accent-teal: #00788c;
+  --jl-accent-purple: #6f80ee;
+  --jl-bg-warm: #fcfaf6;
+  --jl-text-dark: #191c1f;
+  --jl-text-muted: #6c757d;
+  --jl-border-color: #ede8df;
+  --jl-radius-sm: 8px;
+  --jl-radius-md: 14px;
+  --jl-radius-lg: 20px;
+  --jl-radius-xl: 28px;
+  --jl-radius-pill: 999px;
+  --jl-shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --jl-shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--jl-bg-warm);
+  color: var(--jl-text-dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   1. HEADER & NAVIGATION (Figma Slice 1)
+   ========================================================================== */
+
+.japalink-header {
+  background: linear-gradient(180deg, #ffa128 0%, #ff981f 100%);
+  padding-top: 14px;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 18px rgba(255, 140, 20, 0.22);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Logo */
+.japalink-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.japalink-logo-box {
+  width: 44px;
+  height: 44px;
+  background: #0080ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+  transform: rotate(-7deg);
+  box-shadow: 0 4px 10px rgba(0, 80, 200, 0.35);
+  border: 2px solid #ffffff;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.japalink-logo:hover .japalink-logo-box {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.japalink-logo-text {
+  line-height: 1.1;
+}
+
+.japalink-logo-brand {
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.japalink-logo-brand .brand-japa {
+  color: #0b57d0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.japalink-logo-brand .brand-link {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.japalink-logo-brand .brand-sparkle {
+  color: #ffffff;
+  font-size: 16px;
+  vertical-align: super;
+}
+
+.japalink-logo-tagline {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  opacity: 0.95;
+  display: block;
+}
+
+/* Header Search Bar */
+.japalink-search-pill {
+  background: #ffffff;
+  border-radius: var(--jl-radius-pill);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 3px 4px 3px 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.search-store-btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: #4a5568;
+  padding: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none !important;
+}
+
+.search-store-divider {
+  width: 1px;
+  height: 18px;
+  background-color: #cbd5e0;
+  margin-right: 12px;
+}
+
+.search-input-field {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 13.5px;
+  color: #2d3748;
+  padding: 0;
+  height: 100%;
+  background: transparent;
+}
+
+.search-input-field::placeholder {
+  color: #a0aec0;
+}
+
+.search-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ff7800;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.search-action-btn:hover {
+  background: #e66b00;
+  transform: scale(1.05);
+}
+
+/* Header Action Icons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-action-icon {
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.header-action-icon:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.header-action-icon .cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #e51b1b;
+  color: #ffffff;
+  border-radius: var(--jl-radius-pill);
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ff9a23;
+  padding: 0 4px;
+}
+
+.badge-pop {
+  animation: badgePop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0.6); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Secondary Navigation Bar (Figma Slice 1) */
+.japalink-subnav {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-cat-pill {
+  background: #ff7200;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 20px;
+  border-radius: var(--jl-radius-pill);
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.nav-cat-pill:hover, .nav-cat-pill.active {
+  background: #e66200;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-stores-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-store-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none !important;
+  opacity: 0.95;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-store-link:hover, .nav-store-link.active {
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-store-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.nav-store-link:hover::after, .nav-store-link.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. HERO PROMO BANNER (Figma Slice 1)
+   ========================================================================== */
+
+.page-headline-title {
+  font-size: 27px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+.japalink-hero-banner {
+  border-radius: var(--jl-radius-xl);
+  overflow: hidden;
+  background: linear-gradient(135deg, #d8f5ef 0%, #b8f1e5 50%, #cef5ed 100%);
+  position: relative;
+  box-shadow: 0 12px 36px rgba(0, 160, 140, 0.12);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner-content {
+  padding: 48px 40px;
+  z-index: 2;
+}
+
+.hero-shipping-label {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.hero-discount-value {
+  font-size: 64px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.hero-get-now-btn {
+  background: linear-gradient(180deg, #ffb462 0%, #ff8e2c 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 38px;
+  border-radius: var(--jl-radius-pill);
+  display: inline-block;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(255, 142, 44, 0.4);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.hero-get-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 142, 44, 0.55);
+}
+
+.hero-banner-image-wrap {
+  text-align: right;
+  z-index: 1;
+}
+
+.hero-banner-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--jl-radius-xl);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.japalink-hero-banner:hover .hero-banner-img {
+  transform: scale(1.02);
+}
+
+/* Banner Slider Indicator Dashes */
+.banner-indicators-dashes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+.indicator-dash {
+  width: 28px;
+  height: 3.5px;
+  border-radius: 3px;
+  background: #cbd5e0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.indicator-dash.active {
+  background: #ff7800;
+  width: 42px;
+}
+
+/* ==========================================================================
+   3. FOUR SHORTCUT CARDS (Figma Slice 2)
+   ========================================================================== */
+
+.shortcut-card {
+  border-radius: var(--jl-radius-lg);
+  background: #fff8e8;
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #faeed5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shortcut-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.shortcut-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 2px;
+}
+
+.shortcut-card-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.shortcut-btn {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: var(--jl-radius-pill);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  display: inline-block;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.shortcut-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+/* Specific Card Styling matching Figma */
+.shortcut-card-1 .shortcut-card-subtitle { color: #00788c; }
+.shortcut-card-1 .shortcut-btn { background: #007399; }
+
+.shortcut-card-2 .shortcut-card-title .highlight-blue { color: #5f72eb; }
+.shortcut-card-2 .shortcut-card-subtitle { color: #6f80ee; }
+.shortcut-card-2 .shortcut-btn { background: #6f80ee; }
+
+.shortcut-card-3 .shortcut-card-title .highlight-orange { color: #ea7a00; }
+.shortcut-card-3 .shortcut-card-subtitle { color: #d97706; }
+.shortcut-card-3 .shortcut-btn { background: #e67700; }
+
+.shortcut-card-4 .shortcut-card-title { color: #eb4d4b; }
+.shortcut-card-4 .shortcut-card-subtitle { color: #e51b1b; }
+.shortcut-card-4 .shortcut-btn { background: #e51b1b; }
+
+.shortcut-card-graphic {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 95px;
+  height: 95px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   4. FEATURED COLLECTIONS & HORIZONTAL SCROLLBAR (Figma Slice 2 & 3)
+   ========================================================================== */
+
+.featured-collections-section {
+  margin-top: 40px;
+  margin-bottom: 48px;
+}
+
+.featured-heading-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+}
+
+/* Scroll Container */
+.featured-scroll-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 4px 20px 4px;
+  scrollbar-width: none; /* Hide default browser scrollbar */
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.featured-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-scroll-container.grabbing {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+/* Circular Collection Card */
+.collection-circle-item {
+  flex: 0 0 auto;
+  width: 175px;
+  text-align: center;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.collection-circle-item:hover {
+  transform: translateY(-5px);
+}
+
+.collection-circle-disc {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px auto;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  position: relative;
+  transition: box-shadow 0.25s ease;
+}
+
+.collection-circle-item:hover .collection-circle-disc {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.collection-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.collection-circle-item:hover .collection-circle-img {
+  transform: scale(1.08);
+}
+
+.collection-circle-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.collection-circle-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.collection-circle-item:hover .collection-circle-link {
+  color: #ff7800;
+}
+
+/* Custom Interactive Progress / Scrollbar Track & Thumb (Figma Slice 3) */
+.featured-scrollbar-wrapper {
+  max-width: 880px;
+  margin: 20px auto 0 auto;
+  padding: 0 16px;
+}
+
+.featured-scrollbar-track {
+  width: 100%;
+  height: 6px;
+  background-color: #dbe2e8;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.featured-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background-color: #556678;
+  border-radius: 999px;
+  cursor: grab;
+  transition: background-color 0.2s ease;
+}
+
+.featured-scrollbar-thumb:hover, .featured-scrollbar-thumb:active {
+  background-color: #3d4a58;
+}
+
+/* ==========================================================================
+   5. HOW JAPALINK WORKS SECTION (Figma Slice 3)
+   ========================================================================== */
+
+.how-works-section {
+  background: linear-gradient(180deg, #ffa216 0%, #ff8303 100%);
+  padding: 68px 0 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-works-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 46px;
+  letter-spacing: -0.5px;
+}
+
+.how-step-card {
+  background: #ffffff;
+  border-radius: var(--jl-radius-lg);
+  padding: 26px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+.step-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.step-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ff7b00;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   6. STORE REVIEWS (Figma Slice 4)
+   ========================================================================== */
+
+.store-reviews-section {
+  background: linear-gradient(180deg, #ff8303 0%, #ff7700 100%);
+  padding: 40px 0 68px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.store-reviews-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.review-quote-icon {
+  font-size: 42px;
+  line-height: 1;
+  opacity: 0.95;
+  margin-bottom: 12px;
+}
+
+.review-quote-text {
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0 auto 20px auto;
+  opacity: 0.98;
+  font-weight: 400;
+  transition: opacity 0.25s ease;
+}
+
+.review-stars-wrap {
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+}
+
+.review-author-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.review-date-info {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+.review-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-dot-dash {
+  width: 28px;
+  height: 3.5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.review-dot-dash.active {
+  background: #ffffff;
+  width: 40px;
+}
+
+/* ==========================================================================
+   7. ABOUT JAPALINK (Figma Slice 5)
+   ========================================================================== */
+
+.about-japalink-section {
+  padding: 60px 0 70px 0;
+  background-color: #fcfaf7;
+}
+
+.about-japalink-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.about-card {
+  height: 480px;
+  border-radius: var(--jl-radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.about-card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-card:hover .about-card-bg {
+  transform: scale(1.04);
+}
+
+.about-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 34px 30px;
+  background: linear-gradient(to top, rgba(240, 243, 246, 0.96) 0%, rgba(240, 243, 246, 0.82) 40%, rgba(240, 243, 246, 0) 80%);
+  z-index: 2;
+}
+
+.about-card-heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.about-card-text {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+  max-width: 440px;
+  margin-bottom: 20px;
+}
+
+.about-learn-more-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #2d3748;
+  color: #1a202c !important;
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 8px 28px;
+  border-radius: var(--jl-radius-pill);
+  display: inline-block;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.about-learn-more-btn:hover {
+  background: #1a202c;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   8. GENERIC CATALOG, PRODUCT CARDS & MODAL DETAILS
+   ========================================================================== */
+
+.rounded-xl {
+  border-radius: var(--jl-radius-lg) !important;
+}
+
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-card-img-wrap {
+  height: 220px;
+  overflow: hidden;
+  background: #f7fafc;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.06);
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.badge-success-light {
+  background-color: #e6f9ed;
+  color: #1a8754;
+}
+
+.x-small {
+  font-size: 11px;
+}
+
+/* Custom Vector Graphics & SVGs */
+.shortcut-svg-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* Quick Nav Modal Mega Menu */
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* ==========================================================================
+   9. FOOTER (Figma Slice 6)
+   ========================================================================== */
+
+.japalink-footer {
+  background-color: #1a2530;
+  color: #ffffff;
+  padding: 60px 0 35px 0;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-col-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #94a3b8 !important;
+  font-size: 13.5px;
+  text-decoration: none !important;
+  transition: color 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #ff9a23 !important;
+  transform: translateX(2px);
+}
+
+.footer-bottom-bar {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-social-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-right: 4px;
+}
+
+.footer-social-icon {
+  color: #ffffff !important;
+  font-size: 20px;
+  text-decoration: none !important;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-icon:hover {
+  opacity: 1;
+  color: #ff9a23 !important;
+  transform: translateY(-2px);
+}
+
+.footer-payment-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-payment-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-right: 4px;
+}
+
+.footer-payment-icon {
+  color: #ffffff;
+  font-size: 24px;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.footer-payment-badge {
+  background: #ffffff;
+  color: #1a2530;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+}
+

@@ -1,0 +1,187 @@
+/* ==========================================================================
+   JapaLink - Responsive Adjustments (Mobile, Tablet, Desktop)
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .page-headline-title {
+    font-size: 23px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  .japalink-hero-banner {
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .hero-banner-content {
+    padding: 32px 24px 20px 24px;
+    text-align: center;
+  }
+
+  .hero-discount-value {
+    font-size: 46px;
+    margin-bottom: 16px;
+  }
+
+  .hero-banner-image-wrap {
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .hero-banner-img {
+    max-height: 240px;
+    width: auto;
+  }
+
+  .about-card {
+    height: 400px;
+    margin-bottom: 24px;
+  }
+
+  .about-card-overlay {
+    padding: 24px 20px;
+  }
+
+  .how-step-card {
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .japalink-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .japalink-logo-box {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+    margin-right: 6px;
+  }
+
+  .japalink-logo-brand {
+    font-size: 21px;
+  }
+
+  .japalink-logo-tagline {
+    font-size: 8.5px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .header-action-icon {
+    font-size: 18px;
+  }
+
+  .japalink-subnav {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .japalink-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-stores-list {
+    gap: 14px;
+  }
+
+  .nav-cat-pill {
+    padding: 5px 16px;
+    font-size: 12px;
+  }
+
+  .nav-store-link {
+    font-size: 13px;
+  }
+
+  .shortcut-card {
+    margin-bottom: 16px;
+  }
+
+  .collection-circle-item {
+    width: 140px;
+  }
+
+  .collection-circle-disc {
+    width: 130px;
+    height: 130px;
+  }
+
+  .collection-circle-title {
+    font-size: 14px;
+  }
+
+  .how-works-title {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .how-step-card {
+    padding: 20px 16px;
+  }
+
+  .step-number {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .step-title {
+    font-size: 17px;
+  }
+
+  .store-reviews-title {
+    font-size: 24px;
+  }
+
+  .review-quote-text {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .about-card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-discount-value {
+    font-size: 38px;
+  }
+
+  .hero-shipping-label {
+    font-size: 20px;
+  }
+
+  .hero-get-now-btn {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+
+  .product-card-img-wrap {
+    height: 160px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .japalink-footer {
+    padding: 40px 0 25px 0;
+  }
+
+  .footer-col-title {
+    margin-top: 14px;
+  }
+}
+

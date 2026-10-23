@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JapaLink | Your Link to Japan Goods - Official Japanese Proxy Shopping</title>
+  <meta name="description"
+    content="Shop Mercari Japan, Amazon JP, Surugaya, and any Japanese online store with JapaLink. Enjoy 30 days of free Tokyo warehouse storage and worldwide express delivery.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230080ff'/><text x='50' y='65' font-size='45' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>日本</text></svg>">
+
+  <!-- Bootstrap 4.6.2 CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION (Figma Slice 1)
+       ========================================================================= -->
+  <header class="japalink-header">
+    <div class="container">
+      <!-- Top Row: Logo, Search Bar, Account & Cart -->
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-6 col-md-3 col-lg-3">
+          <a href="#home" class="japalink-logo">
+            <div class="japalink-logo-box">
+              <span>日本</span>
+            </div>
+            <div class="japalink-logo-text">
+              <div class="japalink-logo-brand">
+                <span class="brand-japa">Japa</span><span class="brand-link">Link</span><span
+                  class="brand-sparkle">✦</span>
+              </div>
+              <small class="japalink-logo-tagline">日本の良いものを、あなたのもとへ</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Search Bar with Store Selector -->
+        <div class="col-12 col-md-6 col-lg-6 order-3 order-md-2 mt-2 mt-md-0">
+          <form id="header-search-form" class="japalink-search-pill">
+            <div class="dropdown">
+              <button class="search-store-btn dropdown-toggle" type="button" id="search-store-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="search-store-label">Mercari</span>
+              </button>
+              <div class="dropdown-menu shadow-sm border-0 rounded-lg mt-2" id="search-store-dropdown"
+                aria-labelledby="search-store-btn">
+                <a class="dropdown-item py-2" href="#" data-store="mercari"><i
+                    class="fas fa-store text-danger mr-2"></i> Mercari Japan</a>
+                <a class="dropdown-item py-2" href="#" data-store="amazon"><i
+                    class="fab fa-amazon text-warning mr-2"></i> Amazon Japan</a>
+                <a class="dropdown-item py-2" href="#" data-store="surugaya"><i
+                    class="fas fa-gamepad text-primary mr-2"></i> Surugaya Hobby</a>
+                <a class="dropdown-item py-2" href="#" data-store="zenplus"><i class="fas fa-tag text-success mr-2"></i>
+                  ZenPlus (0% Fee)</a>
+                <a class="dropdown-item py-2" href="#" data-store="minne"><i
+                    class="fas fa-paint-brush text-danger mr-2"></i> Minne Handmade</a>
+                <a class="dropdown-item py-2" href="#" data-store="jdirect"><i
+                    class="fas fa-box-open text-warning mr-2"></i> JDirectItems</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item py-2 font-weight-bold" href="#" data-store="all"><i
+                    class="fas fa-globe mr-2"></i> All Japanese Stores</a>
+              </div>
+            </div>
+            <div class="search-store-divider"></div>
+            <input type="text" id="header-search-input" class="form-control search-input-field flex-grow-1"
+              placeholder="Search..." aria-label="Search items">
+            <button type="submit" class="search-action-btn" aria-label="Submit search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Header Actions: Account, Cart, More -->
+        <div class="col-6 col-md-3 col-lg-3 order-2 order-md-3 text-right">
+          <div class="header-actions">
+            <!-- User Profile Icon / Avatar -->
+            <a href="#auth-modal" id="header-profile-btn" class="header-action-icon" data-toggle="modal"
+              data-target="#auth-modal" title="Sign In / Register">
+              <i class="far fa-user text-white"></i>
+            </a>
+
+
+            <!-- Shopping Cart Icon with Live Badge -->
+            <a href="#cart" class="header-action-icon" title="View Cart">
+              <i class="fas fa-shopping-cart text-white"></i>
+              <span class="cart-badge badge-pop">0</span>
+            </a>
+
+            <!-- Three Dots Quick Menu -->
+            <a href="#" class="header-action-icon" data-toggle="modal" data-target="#more-menu-modal"
+              title="More Options">
+              <i class="fas fa-ellipsis-h text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Navigation Bar: Categories & Stores -->
+      <nav class="japalink-subnav" aria-label="Store navigation">
+        <button class="nav-cat-pill border-0" data-toggle="modal" data-target="#categories-modal">
+          <i class="fas fa-th-large mr-2"></i> Categories
+        </button>
+        <ul class="nav-stores-list">
+          <li><a href="#store-mercari" class="nav-store-link">Mercari</a></li>
+          <li>
+            <div class="dropdown d-inline-block">
+              <a href="#store-jdirect" class="nav-store-link dropdown-toggle" id="nav-jdirect-btn"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                JDirectItems
+              </a>
+              <div class="dropdown-menu shadow-sm border-0 rounded-lg" aria-labelledby="nav-jdirect-btn">
+                <a class="dropdown-item" href="#store-jdirect">All Tokyo Direct Goods</a>
+                <a class="dropdown-item" href="#category-stationery">Japanese Stationery</a>
+                <a class="dropdown-item" href="#category-snacks">Kyoto Matcha & Snacks</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#store-amazon" class="nav-store-link">Amazon</a></li>
+          <li><a href="#store-surugaya" class="nav-store-link">Surugaya</a></li>
+          <li><a href="#store-zenplus" class="nav-store-link">Zenplus</a></li>
+          <li><a href="#store-minne" class="nav-store-link">Minne</a></li>
+          <li>
+            <div class="dropdown d-inline-block">
+              <a href="#store-other" class="nav-store-link dropdown-toggle" id="nav-other-btn" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Other Store
+              </a>
+              <div class="dropdown-menu shadow-sm border-0 rounded-lg" aria-labelledby="nav-other-btn">
+                <a class="dropdown-item" href="#store-other"><i class="fas fa-plus-circle text-primary mr-2"></i> Custom
+                  URL Order (Any Site)</a>
+                <a class="dropdown-item" href="#store-other">Booth.pm Proxy</a>
+                <a class="dropdown-item" href="#store-other">Animate Online Shop</a>
+                <a class="dropdown-item" href="#store-other">Premium Bandai</a>
+                <a class="dropdown-item" href="#store-other">Toranoana & Melonbooks</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       VIEW 1: HOME PAGE (Figma Design Replica)
+       ========================================================================= -->
+  <main id="view-home" class="app-view">
+    <div class="container">
+      <!-- Section: Headline -->
+      <h1 class="page-headline-title">Your Link to Japan Goods</h1>
+
+      <!-- Section: Hero Promo Banner (Figma Slice 1) -->
+      <section class="japalink-hero-banner" aria-label="Promotion Banner">
+        <div class="row align-items-center w-100 m-0">
+          <div class="col-md-6 hero-banner-content">
+            <div class="hero-shipping-label">Shipping Discount</div>
+            <div class="hero-discount-value">20% OFF</div>
+            <a href="#calculator" class="hero-get-now-btn">
+              Get Now
+            </a>
+          </div>
+          <div class="col-md-6 hero-banner-image-wrap p-0">
+            <img src="assets/images/hero-banner.jpg" class="hero-banner-img"
+              alt="3D Japanese shipping parcel discount banner with airplane and globe">
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner Slider Indicator Dashes -->
+      <div class="banner-indicators-dashes" role="tablist" aria-label="Hero slider navigation">
+        <button class="indicator-dash active" aria-label="Slide 1"></button>
+        <button class="indicator-dash" aria-label="Slide 2"></button>
+        <button class="indicator-dash" aria-label="Slide 3"></button>
+        <button class="indicator-dash" aria-label="Slide 4"></button>
+        <button class="indicator-dash" aria-label="Slide 5"></button>
+      </div>
+
+      <!-- Section: Four Shortcut Cards (Figma Slice 2) -->
+      <section class="shortcut-cards-section mb-4" aria-label="Quick Services">
+        <div class="row">
+          <!-- Card 1: Credits Mall -->
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="shortcut-card shortcut-card-1">
+              <h5 class="shortcut-card-title">Credits Mall</h5>
+              <div class="shortcut-card-subtitle">Exclusive Finds</div>
+              <a href="#credits-mall" class="shortcut-btn">View More</a>
+              <!-- SVG Illustration: Shopper pushing cart -->
+              <svg class="shortcut-card-graphic" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="70" cy="50" r="38" fill="#e0f7fa" opacity="0.7" />
+                <path d="M50 78L62 48H76L82 78" stroke="#00838f" stroke-width="4" stroke-linecap="round" />
+                <circle cx="72" cy="36" r="8" fill="#00838f" />
+                <path d="M30 65H55L62 48H25" stroke="#00acc1" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="36" cy="74" r="5" fill="#00838f" />
+                <circle cx="50" cy="74" r="5" fill="#00838f" />
+                <path d="M22 45H32L35 60" stroke="#00acc1" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 2: How to Buy -->
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="shortcut-card shortcut-card-2">
+              <h5 class="shortcut-card-title"><span class="highlight-blue">How</span> to Buy</h5>
+              <div class="shortcut-card-subtitle">Quick Start to Shopping</div>
+              <a href="#how-to-buy" class="shortcut-btn">View More</a>
+              <!-- SVG Illustration: Person thinking with lightbulb & question mark -->
+              <svg class="shortcut-card-graphic" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="72" cy="52" r="38" fill="#e8eaf6" opacity="0.7" />
+                <path d="M68 40C68 34 76 34 76 38C76 43 72 44 72 48" stroke="#5c6bc0" stroke-width="3"
+                  stroke-linecap="round" />
+                <circle cx="72" cy="54" r="1.5" fill="#5c6bc0" />
+                <circle cx="72" cy="68" r="10" fill="#ffb74d" />
+                <path d="M62 88C62 78 82 78 82 88" stroke="#5c6bc0" stroke-width="4" stroke-linecap="round" />
+                <path d="M42 35L48 22L54 35" stroke="#fbc02d" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 3: Get More Discounts -->
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="shortcut-card shortcut-card-3">
+              <h5 class="shortcut-card-title">Get More <span class="highlight-orange">Discounts</span></h5>
+              <div class="shortcut-card-subtitle">Coupons & Points</div>
+              <a href="#discounts" class="shortcut-btn">View More</a>
+              <!-- SVG Illustration: Shopping bag with % discount tag & coins -->
+              <svg class="shortcut-card-graphic" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="75" cy="50" r="38" fill="#ffe0b2" opacity="0.6" />
+                <rect x="52" y="42" width="34" height="42" rx="6" fill="#e65100" />
+                <path d="M61 42V32C61 28 77 28 77 32V42" stroke="#ffb74d" stroke-width="3.5" stroke-linecap="round" />
+                <text x="69" y="68" font-size="18" font-weight="900" text-anchor="middle" fill="#ffffff"
+                  font-family="sans-serif">%</text>
+                <circle cx="42" cy="74" r="10" fill="#ffd54f" stroke="#ffb300" stroke-width="2" />
+                <circle cx="36" cy="62" r="8" fill="#ffe082" stroke="#ffb300" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 4: Estimation -->
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="shortcut-card shortcut-card-4">
+              <h5 class="shortcut-card-title">Estimation</h5>
+              <div class="shortcut-card-subtitle">Estimate international shipping fee</div>
+              <a href="#calculator" class="shortcut-btn">View More</a>
+              <!-- SVG Illustration: Calculator & math symbol -->
+              <svg class="shortcut-card-graphic" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="70" cy="50" r="38" fill="#ffcdd2" opacity="0.6" />
+                <rect x="52" y="30" width="36" height="54" rx="6" fill="#d32f2f" />
+                <rect x="58" y="38" width="24" height="12" rx="2" fill="#ffffff" />
+                <circle cx="64" cy="58" r="2.5" fill="#ffffff" />
+                <circle cx="76" cy="58" r="2.5" fill="#ffffff" />
+                <circle cx="64" cy="68" r="2.5" fill="#ffffff" />
+                <circle cx="76" cy="68" r="2.5" fill="#ffffff" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Featured Collections (Figma Slice 2 & 3) -->
+      <section class="featured-collections-section" aria-label="Featured Collections">
+        <h2 class="featured-heading-title">Featured Collections</h2>
+
+        <!-- Horizontal Drag-Scrollable Container -->
+        <div class="featured-scroll-container" id="featured-collections-scroll-container">
+          <!-- Item 1: Anime Figures -->
+          <a href="#category-figures" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-figures.jpg" class="collection-circle-img"
+                alt="Japanese Anime scale figure collection">
+            </div>
+            <div class="collection-circle-title">Anime Figures</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 2: Plush Toys -->
+          <a href="#category-plush" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-plush.jpg" class="collection-circle-img"
+                alt="Japanese anime character plush toys and crane prizes">
+            </div>
+            <div class="collection-circle-title">Plush Toys</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 3: Manga & Novels -->
+          <a href="#category-manga" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-manga.jpg" class="collection-circle-img"
+                alt="Japanese manga books and light novels">
+            </div>
+            <div class="collection-circle-title">Manga & Novels</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 4: Trading Cards -->
+          <a href="#category-cards" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-cards.jpg" class="collection-circle-img"
+                alt="Collectible Japanese monster trading cards and boosters">
+            </div>
+            <div class="collection-circle-title">Trading Cards</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 5: Model Kits -->
+          <a href="#category-models" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-models.jpg" class="collection-circle-img"
+                alt="Japanese Gunpla and scale model kits">
+            </div>
+            <div class="collection-circle-title">Model Kits</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 6: Stationery & Daily -->
+          <a href="#category-stationery" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-stationery.jpg" class="collection-circle-img"
+                alt="Japanese fountain pens, Midori notebooks, and stationery">
+            </div>
+            <div class="collection-circle-title">Stationery & Daily</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 7: Snacks & Treats -->
+          <a href="#category-snacks" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-snacks.jpg" class="collection-circle-img"
+                alt="Kyoto Uji matcha sweets and Japanese snacks">
+            </div>
+            <div class="collection-circle-title">Snacks & Treats</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+
+          <!-- Item 8: Retro Games -->
+          <a href="#category-retrogames" class="collection-circle-item">
+            <div class="collection-circle-disc">
+              <img src="assets/images/collection-retrogames.jpg" class="collection-circle-img"
+                alt="Retro Japanese video games and consoles">
+            </div>
+            <div class="collection-circle-title">Retro Games</div>
+            <span class="collection-circle-link">View Collections <i class="far fa-arrow-alt-circle-right"></i></span>
+          </a>
+        </div>
+
+        <!-- Interactive Custom Scrollbar / Progress Bar (Figma Slice 3) -->
+        <div class="featured-scrollbar-wrapper" title="Drag or click to scroll collections">
+          <div class="featured-scrollbar-track" id="featured-scrollbar-track">
+            <div class="featured-scrollbar-thumb" id="featured-scrollbar-thumb"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section: How JapaLink Works (Figma Slice 3) -->
+    <section class="how-works-section" aria-label="How JapaLink Works">
+      <div class="container">
+        <h2 class="how-works-title">How JapaLink Works</h2>
+
+        <div class="row">
+          <!-- Step 01: Search -->
+          <div class="col-6 col-md-4 col-lg mb-3">
+            <div class="how-step-card">
+              <div class="step-label">STEP</div>
+              <div class="step-number">01</div>
+              <h5 class="step-title">Search</h5>
+              <p class="step-description">Find the desired item on the shopping platform and add it to your cart</p>
+            </div>
+          </div>
+
+          <!-- Step 02: Shopping -->
+          <div class="col-6 col-md-4 col-lg mb-3">
+            <div class="how-step-card">
+              <div class="step-label">STEP</div>
+              <div class="step-number">02</div>
+              <h5 class="step-title">Shopping</h5>
+              <p class="step-description">Pay the 1st payment (product and service fee), and we will buy the item for
+                you.</p>
+            </div>
+          </div>
+
+          <!-- Step 03: Warehouse -->
+          <div class="col-6 col-md-4 col-lg mb-3">
+            <div class="how-step-card">
+              <div class="step-label">STEP</div>
+              <div class="step-number">03</div>
+              <h5 class="step-title">Warehouse</h5>
+              <p class="step-description">The item arrives at the warehouse and can enjoy 30 days of free storage.</p>
+            </div>
+          </div>
+
+          <!-- Step 04: Payment -->
+          <div class="col-6 col-md-4 col-lg mb-3">
+            <div class="how-step-card">
+              <div class="step-label">STEP</div>
+              <div class="step-number">04</div>
+              <h5 class="step-title">Payment</h5>
+              <p class="step-description">Pay the 2nd payment (international shipping fee), and we will ship your
+                package.</p>
+            </div>
+          </div>
+
+          <!-- Step 05: Delivery -->
+          <div class="col-12 col-md-4 col-lg mb-3">
+            <div class="how-step-card">
+              <div class="step-label">STEP</div>
+              <div class="step-number">05</div>
+              <h5 class="step-title">Delivery</h5>
+              <p class="step-description">The package is delivered to your door. This typically takes 1 to 2 weeks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Store Reviews (Figma Slice 4) -->
+    <section class="store-reviews-section" aria-label="Customer Reviews">
+      <div class="container">
+        <h2 class="store-reviews-title">Store Reviews</h2>
+
+        <div class="review-quote-icon">“</div>
+        <div class="review-quote-text" id="review-quote-text">
+          Ordered a rare vintage Evangelion scale figure and two manga artbooks from Mercari Japan. JapaLink’s warehouse
+          team packaged everything with multiple layers of industrial bubble wrap and reinforced corner protectors.
+          Arrived in California in just 4 days via DHL! The 1st and 2nd payment breakdown was crystal clear with zero
+          surprise fees.
+        </div>
+
+        <div class="review-stars-wrap">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+
+        <div class="review-author-name" id="review-author-name">User B. (United States)</div>
+        <div class="review-date-info" id="review-date-info">October 14, 2024</div>
+
+        <!-- Slider Dots -->
+        <div class="review-dots-container" id="review-dots-container">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: About JapaLink (Figma Slice 5) -->
+    <section class="about-japalink-section" aria-label="About JapaLink">
+      <div class="container">
+        <h2 class="about-japalink-title">About JapaLink</h2>
+
+        <div class="row">
+          <!-- Card 1: Who We Are -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <div class="about-card">
+              <img src="assets/images/who-we-are.jpg" class="about-card-bg"
+                alt="Tokyo Akihabara shopping street storefront with Japanese merchandise signs">
+              <div class="about-card-overlay">
+                <h3 class="about-card-heading">Who We Are</h3>
+                <p class="about-card-text">
+                  We are a curated online Japanese stationery and lifestyle goods store, delivering from Tokyo to the
+                  world.
+                </p>
+                <a href="#how-to-buy" class="about-learn-more-btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Our Service -->
+          <div class="col-md-6">
+            <div class="about-card">
+              <img src="assets/images/our-service.jpg" class="about-card-bg"
+                alt="Careful packaging and shipping box handling at JapaLink Tokyo warehouse">
+              <div class="about-card-overlay">
+                <h3 class="about-card-heading">Our Service</h3>
+                <p class="about-card-text">
+                  We strive for the highest level of quality across every part of our business, from product curation
+                  and packaging to customer service.
+                </p>
+                <a href="#fees" class="about-learn-more-btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 2: GENERIC STORE & CATEGORY CATALOG
+       ========================================================================= -->
+  <main id="view-generic-catalog" class="app-view d-none py-4">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active" id="catalog-breadcrumb-item">Store</li>
+        </ol>
+      </nav>
+
+      <!-- Store / Category Header Banner -->
+      <div class="card border-0 shadow-sm rounded-xl p-4 bg-white mb-4">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <div>
+            <div class="d-flex align-items-center mb-2">
+              <h2 class="font-weight-bold mb-0 mr-3" id="catalog-title">Mercari Japan</h2>
+              <span id="catalog-badge" class="badge badge-warning text-white font-weight-bold px-3 py-1">Flea
+                Market</span>
+            </div>
+            <p class="text-muted mb-0" id="catalog-desc">
+              Japan’s largest peer-to-peer flea market marketplace. Rare anime figures, vintage collectibles, and
+              second-hand bargains.
+            </p>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <a href="#store-other" class="btn btn-outline-warning text-dark rounded-pill font-weight-bold small">
+              <i class="fas fa-link mr-1"></i> Paste Direct Item Link
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Items Grid -->
+      <div class="row" id="catalog-items-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 3: "OTHER STORE" CUSTOM PROXY ORDER FORM
+       ========================================================================= -->
+  <main id="view-other-store" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Other Store (Custom URL Order)</li>
+        </ol>
+      </nav>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-xl p-4 bg-white mb-4">
+            <div class="text-center mb-4">
+              <div class="badge badge-warning text-white px-3 py-1 font-weight-bold mb-2">
+                <i class="fas fa-link mr-1"></i> Any Japanese Store
+              </div>
+              <h3 class="font-weight-bold text-dark">Submit a Custom Japanese URL Order</h3>
+              <p class="text-muted small">
+                Want to buy from Booth.pm, Animate, Premium Bandai, Melonbooks, Toranoana, or any official Japanese
+                online shop? Simply paste the link below and our Tokyo team will purchase it for you!
+              </p>
+            </div>
+
+            <form id="custom-proxy-order-form">
+              <div class="form-group mb-3">
+                <label class="font-weight-bold small text-muted">JAPANESE PRODUCT URL *</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-light"><i class="fas fa-link text-primary"></i></span>
+                  </div>
+                  <input type="url" id="custom-url" class="form-control"
+                    placeholder="https://booth.pm/ja/items/... or https://p-bandai.jp/..." required>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="font-weight-bold small text-muted">PRODUCT NAME / TITLE *</label>
+                <input type="text" id="custom-title" class="form-control"
+                  placeholder="e.g. Hololive Limited Acrylic Stand or Gundam Exclusive Kit" required>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label class="font-weight-bold small text-muted">PRICE IN JAPANESE YEN (¥ JPY) *</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-light font-weight-bold">¥</span>
+                    </div>
+                    <input type="number" id="custom-price" class="form-control" placeholder="e.g. 3500" min="100"
+                      step="50" required>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group mb-3">
+                  <label class="font-weight-bold small text-muted">QUANTITY *</label>
+                  <input type="number" id="custom-qty" class="form-control" value="1" min="1" max="10" required>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="font-weight-bold small text-muted">STORE OR WEBSITE NAME</label>
+                <input type="text" id="custom-store-name" class="form-control"
+                  placeholder="e.g. Booth, Animate, Premium Bandai">
+              </div>
+
+              <div class="form-group mb-4">
+                <label class="font-weight-bold small text-muted">SPECIFICATIONS / SPECIAL REQUESTS</label>
+                <textarea id="custom-notes" class="form-control" rows="3"
+                  placeholder="Size, color, character variation, or specific instructions for our Tokyo buyer"></textarea>
+              </div>
+
+              <div class="alert alert-light border rounded-lg p-3 small mb-4">
+                <div class="d-flex align-items-center mb-1 font-weight-bold text-dark">
+                  <i class="fas fa-check-circle text-success mr-2"></i> Transparent Proxy Pricing:
+                </div>
+                <div class="text-muted">
+                  You only pay the item price + standard <strong>¥300 proxy service fee</strong>. 30 days of free
+                  warehouse storage included!
+                </div>
+              </div>
+
+              <button type="submit"
+                class="btn btn-warning btn-block font-weight-bold py-3 text-white rounded-pill shadow-sm">
+                <i class="fas fa-cart-plus mr-2"></i> Add Custom Proxy Item to Cart
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 4: ALL PRODUCTS & SEARCH CATALOG
+       ========================================================================= -->
+  <main id="view-all-products" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Trending Japanese Products</li>
+        </ol>
+      </nav>
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="font-weight-bold mb-1" id="all-products-title">Trending Japanese Products</h2>
+          <p class="text-muted small mb-0">Browse top authentic listings directly available for proxy purchase.</p>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-sm btn-outline-dark dropdown-toggle rounded-pill" type="button" id="sort-dropdown"
+            data-toggle="dropdown">
+            Sort by: Featured
+          </button>
+          <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
+            <a class="dropdown-item" href="#">Featured & Popular</a>
+            <a class="dropdown-item" href="#">Price: Low to High</a>
+            <a class="dropdown-item" href="#">Price: High to Low</a>
+            <a class="dropdown-item" href="#">Newest Arrivals</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="all-products-grid">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 5: PRODUCT DETAIL VIEW
+       ========================================================================= -->
+  <main id="view-product-detail" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item"><a href="#products" class="text-warning">Products</a></li>
+          <li class="breadcrumb-item active">Product Details</li>
+        </ol>
+      </nav>
+
+      <div id="product-detail-container">
+        <!-- Dynamically populated by Router.renderProductDetailView -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 6: SHOPPING CART
+       ========================================================================= -->
+  <main id="view-cart" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Shopping Cart</li>
+        </ol>
+      </nav>
+
+      <h2 class="font-weight-bold mb-4">Shopping Cart & Haul Consolidation</h2>
+
+      <div class="row">
+        <!-- Cart Items List (Grouped by Store) -->
+        <div class="col-lg-8" id="cart-items-container">
+          <!-- Dynamically populated by Cart.renderCartView -->
+        </div>
+
+        <!-- 1st Payment Order Summary -->
+        <div class="col-lg-4" id="cart-summary-container">
+          <!-- Dynamically populated by Cart.renderCartView -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 7: 2-STEP CHECKOUT & PAYMENT
+       ========================================================================= -->
+  <main id="view-checkout" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item"><a href="#cart" class="text-warning">Cart</a></li>
+          <li class="breadcrumb-item active">1st Payment Checkout</li>
+        </ol>
+      </nav>
+
+      <h2 class="font-weight-bold mb-4">1st Payment Checkout</h2>
+
+      <div id="checkout-container">
+        <!-- Dynamically populated by Router.renderCheckout -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 8: SHIPPING FEE ESTIMATOR / CALCULATOR
+       ========================================================================= -->
+  <main id="view-calculator" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Shipping Calculator</li>
+        </ol>
+      </nav>
+
+      <div id="shipping-calc-container">
+        <!-- Dynamically populated by ShippingCalculator.renderCalculator -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 9: HOW TO BUY GUIDE
+       ========================================================================= -->
+  <main id="view-how-to-buy" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">How to Buy</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 p-md-5 bg-white mb-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge badge-warning text-white px-3 py-1 font-weight-bold mb-2">Simple & Transparent</span>
+          <h2 class="font-weight-bold">How to Buy from Japan with JapaLink</h2>
+          <p class="text-muted">
+            Shop from any domestic Japanese website without language barriers or Japanese payment restrictions. Here is
+            our 5-step journey:
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border rounded-xl p-4">
+              <div class="h3 font-weight-bold text-warning mb-2">01</div>
+              <h5 class="font-weight-bold">Find & Add to Cart</h5>
+              <p class="text-muted small">
+                Search directly for items on Mercari, Amazon Japan, Surugaya, or paste any custom URL from Booth,
+                Animate, or Premium Bandai.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border rounded-xl p-4">
+              <div class="h3 font-weight-bold text-warning mb-2">02</div>
+              <h5 class="font-weight-bold">1st Payment (Item + Service Fee)</h5>
+              <p class="text-muted small">
+                Pay the exact item price plus our low ¥300 proxy service fee. Our Tokyo purchasing team immediately buys
+                the listing from the Japanese merchant.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border rounded-xl p-4">
+              <div class="h3 font-weight-bold text-warning mb-2">03</div>
+              <h5 class="font-weight-bold">30 Days Free Storage & Photos</h5>
+              <p class="text-muted small">
+                Your items arrive at our Tokyo warehouse. Enjoy 30 days of free storage to combine multiple orders and
+                request optional high-resolution inspection photos.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border rounded-xl p-4">
+              <div class="h3 font-weight-bold text-warning mb-2">04</div>
+              <h5 class="font-weight-bold">2nd Payment (International Shipping)</h5>
+              <p class="text-muted small">
+                Select your preferred shipping carrier (DHL Express, FedEx, EMS, or Surface Mail), apply your coupons,
+                and pay international postage.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border rounded-xl p-4">
+              <div class="h3 font-weight-bold text-warning mb-2">05</div>
+              <h5 class="font-weight-bold">Worldwide Doorstep Delivery</h5>
+              <p class="text-muted small">
+                We pack with industrial bubble wrap and reinforced boxes. Track your parcel door-to-door until it
+                arrives safely in your hands!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#products" class="btn btn-warning text-white font-weight-bold px-5 py-3 rounded-pill shadow-sm">
+            Start Shopping Now <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 10: PAYMENT & FEES BREAKDOWN
+       ========================================================================= -->
+  <main id="view-fees" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Payment & Fees</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 p-md-5 bg-white mb-4">
+        <h2 class="font-weight-bold mb-3">JapaLink Transparent Fee Structure</h2>
+        <p class="text-muted mb-4">No hidden charges or unexpected handling surcharges. We keep our proxy fees simple,
+          fair, and transparent.</p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="bg-light">
+              <tr>
+                <th>Service Type</th>
+                <th>Fee (JPY)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-weight-bold">Proxy Service Fee</td>
+                <td class="font-weight-bold text-primary">¥300 / listing</td>
+                <td>Flat purchasing fee per item order. ZenPlus store items are 0 yen!</td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">Tokyo Warehouse Storage</td>
+                <td class="font-weight-bold text-success">FREE for 30 Days</td>
+                <td>¥100 per parcel per day after the free 30-day period expires.</td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">Parcel Consolidation</td>
+                <td class="font-weight-bold">¥500 flat</td>
+                <td>Combine up to 10 packages into a single international box to save up to 70% shipping.</td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">HD Photo Inspection</td>
+                <td class="font-weight-bold">¥300</td>
+                <td>5 high-resolution photos of your item, packaging, and manufacturer seals before international
+                  dispatch.</td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">Repackaging & Bubble Wrap</td>
+                <td class="font-weight-bold text-success">FREE</td>
+                <td>Standard reinforced cardboard packing, corner protection, and bubble wrap.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 11: STORAGE & SHIPPING INFO
+       ========================================================================= -->
+  <main id="view-shipping" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Storage & Shipping Guide</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 p-md-5 bg-white mb-4">
+        <h2 class="font-weight-bold mb-3">Tokyo Warehouse & International Carriers</h2>
+        <p class="text-muted mb-4">Learn about our shipping partners, packaging standards, and restricted goods.</p>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h5 class="font-weight-bold text-dark mb-3"><i class="fas fa-plane text-warning mr-2"></i> Supported
+              Shipping Methods</h5>
+            <ul class="list-group list-group-flush small">
+              <li class="list-group-item px-0"><strong>DHL Express Worldwide:</strong> 2 - 4 business days. Signature
+                required, ultra-fast tracking.</li>
+              <li class="list-group-item px-0"><strong>FedEx International Priority:</strong> 3 - 5 business days.
+                Excellent handling for electronics & figures.</li>
+              <li class="list-group-item px-0"><strong>Japan Post EMS:</strong> 4 - 7 business days. National postal
+                network, no remote area surcharges.</li>
+              <li class="list-group-item px-0"><strong>Surface Seamail:</strong> 30 - 60 days. Best budget solution for
+                heavy parcels & Gunpla hauls.</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <h5 class="font-weight-bold text-danger mb-3"><i class="fas fa-ban text-danger mr-2"></i> Prohibited &
+              Restricted Items</h5>
+            <p class="text-muted small">In compliance with international aviation regulations, the following cannot be
+              shipped overseas:</p>
+            <ul class="small text-muted pl-3">
+              <li>Flammable liquids, perfumes, room diffusers, nail polish</li>
+              <li>Explosives, lighters, fireworks, aerosol spray cans</li>
+              <li>Standalone lithium-ion battery packs or power banks</li>
+              <li>Perishable fresh foods, meats, or plants requiring quarantine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 12: CREDITS MALL & DISCOUNTS
+       ========================================================================= -->
+  <main id="view-credits-mall" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Credits Mall</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 bg-white mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div>
+            <h2 class="font-weight-bold mb-1">Credits Mall & Rewards</h2>
+            <p class="text-muted small mb-0">Redeem your JapaPoints for shipping vouchers and service discounts.</p>
+          </div>
+          <div class="bg-light p-3 rounded-pill mt-3 mt-md-0 d-flex align-items-center">
+            <i class="fas fa-coins text-warning fa-lg mr-2"></i>
+            <span class="font-weight-bold">Your Balance: 1,250 Points</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card border rounded-xl p-4 text-center h-100">
+            <div class="h2 font-weight-bold text-danger mb-1">20% OFF</div>
+            <h5 class="font-weight-bold">Shipping Discount Voucher</h5>
+            <p class="text-muted small">Save 20% on any DHL Express or EMS international dispatch.</p>
+            <div class="mt-auto pt-3">
+              <span class="badge badge-warning text-white px-3 py-1 font-weight-bold mb-2">Promo Code: JAPALINK20</span>
+              <a href="#calculator" class="btn btn-warning text-white btn-block rounded-pill font-weight-bold">Use
+                Voucher</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card border rounded-xl p-4 text-center h-100">
+            <div class="h2 font-weight-bold text-primary mb-1">10% OFF</div>
+            <h5 class="font-weight-bold">New Member Shipping Coupon</h5>
+            <p class="text-muted small">Redeemable for any international shipping method on your first haul.</p>
+            <div class="mt-auto pt-3">
+              <span class="badge badge-primary px-3 py-1 font-weight-bold mb-2">Code: WELCOME500</span>
+              <a href="#calculator" class="btn btn-primary btn-block rounded-pill font-weight-bold">Use Coupon</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card border rounded-xl p-4 text-center h-100">
+            <div class="h2 font-weight-bold text-success mb-1">FREE</div>
+            <h5 class="font-weight-bold">HD Photo Inspection</h5>
+            <p class="text-muted small">Free 5 HD photos on your next warehouse arrival.</p>
+            <div class="mt-auto pt-3">
+              <span class="text-muted small d-block mb-2">Cost: 300 Points</span>
+              <button class="btn btn-outline-success btn-block rounded-pill font-weight-bold"
+                onclick="alert('Redeemed! Free Inspection added to your account.')">Redeem Points</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main id="view-discounts" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Get More Discounts</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 bg-white mb-4">
+        <h2 class="font-weight-bold mb-2">Active Discounts & Coupons</h2>
+        <p class="text-muted mb-4">Use these coupons during 2nd Payment checkout or shipping fee estimation.</p>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="p-3 border rounded-lg bg-light d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-dark d-block">JAPALINK20</strong>
+                <small class="text-muted">20% OFF International Shipping</small>
+              </div>
+              <button class="btn btn-sm btn-warning text-white rounded-pill"
+                onclick="navigator.clipboard.writeText('JAPALINK20'); Cart.showToast('Copied JAPALINK20 to clipboard!');">Copy
+                Code</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <div class="p-3 border rounded-lg bg-light d-flex justify-content-between align-items-center">
+              <div>
+                <strong class="text-dark d-block">WELCOME500</strong>
+                <small class="text-muted">10% OFF First Order Shipping</small>
+              </div>
+              <button class="btn btn-sm btn-warning text-white rounded-pill"
+                onclick="navigator.clipboard.writeText('WELCOME500'); Cart.showToast('Copied WELCOME500 to clipboard!');">Copy
+                Code</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 13: HELP / FAQ ACCORDION
+       ========================================================================= -->
+  <main id="view-faq" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">Help & FAQ</li>
+        </ol>
+      </nav>
+
+      <div class="card border-0 shadow-sm rounded-xl p-4 p-md-5 bg-white mb-4">
+        <h2 class="font-weight-bold mb-2">Frequently Asked Questions</h2>
+        <p class="text-muted mb-4">Everything you need to know about proxy purchasing, Mercari rules, and Tokyo
+          warehouse services.</p>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="card border-0 mb-3 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-header bg-light py-3 cursor-pointer" data-toggle="collapse" data-target="#faq-1">
+              <h6 class="font-weight-bold mb-0 text-dark d-flex justify-content-between">
+                <span>How does JapaLink proxy shopping work?</span>
+                <i class="fas fa-chevron-down text-muted"></i>
+              </h6>
+            </div>
+            <div id="faq-1" class="collapse show" data-parent="#faqAccordion">
+              <div class="card-body text-muted small">
+                Many domestic Japanese online stores (such as Mercari Japan, Booth, Surugaya) do not ship
+                internationally or require Japanese phone numbers and domestic payment cards. JapaLink acts as your
+                personal shopping agent in Tokyo: we purchase the item for you, receive it at our Tokyo warehouse, store
+                it safely, and ship it directly to your address worldwide.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 mb-3 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-header bg-light py-3 cursor-pointer" data-toggle="collapse" data-target="#faq-2">
+              <h6 class="font-weight-bold mb-0 text-dark d-flex justify-content-between">
+                <span>Why are there two payments (1st & 2nd Payment)?</span>
+                <i class="fas fa-chevron-down text-muted"></i>
+              </h6>
+            </div>
+            <div id="faq-2" class="collapse" data-parent="#faqAccordion">
+              <div class="card-body text-muted small">
+                This is the standard, fairest method used by top Japanese proxies: The 1st Payment covers the actual
+                item cost plus our low proxy service fee (¥300 / item). The 2nd Payment covers international shipping,
+                which can only be accurately calculated after your goods arrive at our Tokyo warehouse, are measured,
+                weighed, and consolidated according to your carrier preference.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 mb-3 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-header bg-light py-3 cursor-pointer" data-toggle="collapse" data-target="#faq-3">
+              <h6 class="font-weight-bold mb-0 text-dark d-flex justify-content-between">
+                <span>How long can I store items in your Tokyo warehouse for free?</span>
+                <i class="fas fa-chevron-down text-muted"></i>
+              </h6>
+            </div>
+            <div id="faq-3" class="collapse" data-parent="#faqAccordion">
+              <div class="card-body text-muted small">
+                All packages enjoy 30 days of 100% FREE warehouse storage from the day of arrival! This gives you plenty
+                of time to order from multiple different stores, wait for all packages to arrive, and consolidate them
+                into a single parcel to save up to 70% on international shipping.
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-0 mb-3 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-header bg-light py-3 cursor-pointer" data-toggle="collapse" data-target="#faq-4">
+              <h6 class="font-weight-bold mb-0 text-dark d-flex justify-content-between">
+                <span>Can I buy items from any Japanese website not listed in the menu?</span>
+                <i class="fas fa-chevron-down text-muted"></i>
+              </h6>
+            </div>
+            <div id="faq-4" class="collapse" data-parent="#faqAccordion">
+              <div class="card-body text-muted small">
+                Yes! Use our "Other Store" Custom URL Order feature. Simply copy the link of any product from any
+                Japanese website (e.g. Bandai Namco, Melonbooks, Toranoana, Yahoo Auctions), enter the title and price
+                in JPY, and add it to your cart. Our agents will process it manually.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 14: USER PROFILE & ORDERS
+       ========================================================================= -->
+  <main id="view-profile" class="app-view d-none py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent p-0 mb-3 small">
+          <li class="breadcrumb-item"><a href="#home" class="text-warning">Home</a></li>
+          <li class="breadcrumb-item active">My Account</li>
+        </ol>
+      </nav>
+
+      <div id="profile-view-container">
+        <!-- Dynamically populated by Auth.renderProfileView -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Figma Slice 6)
+       ========================================================================= -->
+  <footer class="japalink-footer" id="japalink-main-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: About JapaLink -->
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h6 class="footer-col-title">About JapaLink</h6>
+          <ul class="footer-links-list">
+            <li><a href="#how-to-buy" class="footer-link">Who We Are</a></li>
+            <li><a href="#fees" class="footer-link">Our Proxy Service</a></li>
+            <li><a href="#shipping" class="footer-link">Tokyo Logistics Center</a></li>
+            <li><a href="#faq" class="footer-link">Terms & User Agreement</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Payment & Fees -->
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h6 class="footer-col-title">Payment & Fees</h6>
+          <ul class="footer-links-list">
+            <li><a href="#fees" class="footer-link">1st & 2nd Payment Breakdown</a></li>
+            <li><a href="#fees" class="footer-link">Proxy Service Fee (¥300)</a></li>
+            <li><a href="#fees" class="footer-link">Exchange Rates & Surcharges</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Storage & Shipping -->
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h6 class="footer-col-title">Storage & Shipping</h6>
+          <ul class="footer-links-list">
+            <li><a href="#shipping" class="footer-link">30-Day Free Storage Policy</a></li>
+            <li><a href="#calculator" class="footer-link">International Shipping Rates</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Help -->
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h6 class="footer-col-title">Help</h6>
+          <ul class="footer-links-list">
+            <li><a href="#faq" class="footer-link">Help Center & FAQ</a></li>
+            <li><a href="#how-to-buy" class="footer-link">How to Buy from Mercari</a></li>
+            <li><a href="#shipping" class="footer-link">Customs & Restricted Items</a></li>
+            <li><a href="#faq" class="footer-link">Contact Customer Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Follow Us (Left) & Payment Methods (Right) -->
+      <div class="footer-bottom-bar">
+        <!-- Follow Us with Social Icons -->
+        <div class="footer-social-wrap">
+          <span class="footer-social-label">Follow Us</span>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon"
+            title="Discord" aria-label="JapaLink Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon"
+            title="Instagram" aria-label="JapaLink Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon"
+            title="TikTok" aria-label="JapaLink TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-icon"
+            title="YouTube" aria-label="JapaLink YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+
+        <!-- Payment Methods with Brand Badges -->
+        <div class="footer-payment-wrap">
+          <span class="footer-payment-label">Payment Methods</span>
+          <span class="footer-payment-badge mr-2" title="Visa">
+            <i class="fab fa-cc-visa fa-lg mr-1 text-primary"></i> VISA
+          </span>
+          <span class="footer-payment-badge mr-2" title="PayPal">
+            <i class="fab fa-paypal fa-lg mr-1 text-primary"></i> PayPal
+          </span>
+          <span class="footer-payment-badge mr-2" title="Mastercard">
+            <i class="fab fa-cc-mastercard fa-lg mr-1 text-danger"></i> Mastercard
+          </span>
+          <span class="footer-payment-badge" title="JCB">
+            <i class="fas fa-credit-card fa-lg mr-1 text-success"></i> JCB
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS: Categories Mega Menu, Auth Modal, Order Success Modal, More Menu
+       ========================================================================= -->
+
+
+  <!-- Categories Mega Menu Modal -->
+  <div class="modal fade" id="categories-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content rounded-xl border-0 shadow-lg">
+        <div class="modal-header border-bottom-0 pb-0">
+          <h5 class="modal-title font-weight-bold"><i class="fas fa-th-large text-warning mr-2"></i> Explore Japanese
+            Categories</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <a href="#category-figures" class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow"
+                data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-figures.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Anime Figures</h6>
+                    <small class="text-muted">Scale figures, Nendoroid, Pop Up Parade</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <a href="#category-plush" class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow"
+                data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-plush.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Plush Toys</h6>
+                    <small class="text-muted">Arcade UFO catchers & Pokemon Center</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <a href="#category-manga" class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow"
+                data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-manga.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Manga & Novels</h6>
+                    <small class="text-muted">Original Japanese tankobon & artbooks</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <a href="#category-cards" class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow"
+                data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-cards.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Trading Cards</h6>
+                    <small class="text-muted">Pokemon TCG, One Piece, Yu-Gi-Oh</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <a href="#category-models" class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow"
+                data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-models.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Model Kits</h6>
+                    <small class="text-muted">Bandai Gunpla, Tamiya, Kotobukiya</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <a href="#category-stationery"
+                class="card border rounded-lg p-3 text-decoration-none text-dark hover-shadow" data-dismiss="modal">
+                <div class="d-flex align-items-center">
+                  <img src="assets/images/collection-stationery.jpg" class="rounded-circle mr-3"
+                    style="width: 50px; height: 50px; object-fit: cover;">
+                  <div>
+                    <h6 class="font-weight-bold mb-0">Stationery & Daily</h6>
+                    <small class="text-muted">Japanese pens, Midori notebooks, washi</small>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal (Sign In / Register) -->
+  <div class="modal fade" id="auth-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content rounded-xl border-0 shadow-lg p-3">
+        <div class="modal-header border-bottom-0">
+          <ul class="nav nav-pills w-100" id="authTab" role="tablist">
+            <li class="nav-item w-50 text-center">
+              <a class="nav-link active rounded-pill font-weight-bold" id="signin-tab" data-toggle="pill"
+                href="#signin-pane">Sign In</a>
+            </li>
+            <li class="nav-item w-50 text-center">
+              <a class="nav-link rounded-pill font-weight-bold" id="signup-tab" data-toggle="pill"
+                href="#signup-pane">Register</a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content" id="authTabContent">
+            <!-- Sign In Pane -->
+            <div class="tab-pane fade show active" id="signin-pane">
+              <form
+                onsubmit="event.preventDefault(); Auth.login(document.getElementById('login-email').value, document.getElementById('login-pass').value); $('#auth-modal').modal('hide');">
+                <div class="form-group mb-3">
+                  <label class="small font-weight-bold text-muted">EMAIL ADDRESS</label>
+                  <input type="email" id="login-email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group mb-4">
+                  <label class="small font-weight-bold text-muted">PASSWORD</label>
+                  <input type="password" id="login-pass" class="form-control" placeholder="Enter your password"
+                    required>
+                </div>
+                <button type="submit"
+                  class="btn btn-warning btn-block text-white font-weight-bold py-2 rounded-pill shadow-sm mb-3">
+                  Sign In
+                </button>
+              </form>
+            </div>
+
+            <!-- Sign Up Pane -->
+            <div class="tab-pane fade" id="signup-pane">
+              <form
+                onsubmit="event.preventDefault(); Auth.register(document.getElementById('reg-name').value, document.getElementById('reg-email').value, document.getElementById('reg-pass').value); $('#auth-modal').modal('hide');">
+                <div class="form-group mb-3">
+                  <label class="small font-weight-bold text-muted">FULL NAME</label>
+                  <input type="text" id="reg-name" class="form-control" placeholder="e.g. User Name" required>
+                </div>
+                <div class="form-group mb-3">
+                  <label class="small font-weight-bold text-muted">EMAIL ADDRESS</label>
+                  <input type="email" id="reg-email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group mb-4">
+                  <label class="small font-weight-bold text-muted">PASSWORD</label>
+                  <input type="password" id="reg-pass" class="form-control" placeholder="At least 8 characters"
+                    required>
+                </div>
+                <button type="submit"
+                  class="btn btn-warning btn-block text-white font-weight-bold py-2 rounded-pill shadow-sm mb-3">
+                  Create JapaLink Account
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success Modal -->
+  <div class="modal fade" id="order-success-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content rounded-xl border-0 shadow-lg text-center p-4">
+        <div class="my-3">
+          <i class="fas fa-check-circle fa-4x text-success"></i>
+        </div>
+        <h4 class="font-weight-bold text-dark mb-1">1st Payment Confirmed!</h4>
+        <p class="text-muted small mb-3">
+          Order <strong id="success-order-id" class="text-primary font-monospace">JL-88421</strong> has been
+          successfully placed.
+        </p>
+        <div class="bg-light p-3 rounded-lg mb-3 small">
+          <div class="d-flex justify-content-between mb-1">
+            <span>Amount Paid:</span>
+            <strong id="success-order-total" class="text-dark">¥23,600</strong>
+          </div>
+          <div class="d-flex justify-content-between text-muted">
+            <span>Next Stage:</span>
+            <span>Procurement by Tokyo Agent</span>
+          </div>
+        </div>
+        <p class="small text-muted mb-4">
+          We will notify you by email as soon as the item arrives at our Tokyo warehouse for weighing and free 30-day
+          storage.
+        </p>
+        <div class="d-flex gap-2">
+          <a href="#profile" class="btn btn-warning flex-grow-1 text-white font-weight-bold py-2 rounded-pill"
+            data-dismiss="modal">
+            View in My Orders
+          </a>
+          <a href="#products" class="btn btn-outline-dark rounded-pill py-2 px-3" data-dismiss="modal">
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More Menu Modal (Three Dots •••) -->
+  <div class="modal fade" id="more-menu-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content rounded-xl border-0 shadow-lg p-3">
+        <div class="modal-header border-bottom-0 pb-1">
+          <h6 class="modal-title font-weight-bold text-dark">Quick Shortcuts</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-2">
+          <div class="list-group list-group-flush">
+            <a href="#calculator" class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-calculator text-danger mr-3"></i> Shipping Estimator
+            </a>
+            <a href="#how-to-buy" class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-book-open text-primary mr-3"></i> How to Buy Guide
+            </a>
+            <a href="#fees" class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-receipt text-warning mr-3"></i> Transparent Fees
+            </a>
+            <a href="#shipping" class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-plane-departure text-info mr-3"></i> Storage & Shipping
+            </a>
+            <a href="#credits-mall"
+              class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-gift text-success mr-3"></i> Credits Mall & Vouchers
+            </a>
+            <a href="#faq" class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-question-circle text-secondary mr-3"></i> Help & FAQ
+            </a>
+            <a href="#store-other"
+              class="list-group-item list-group-item-action border-0 py-2 d-flex align-items-center"
+              data-dismiss="modal">
+              <i class="fas fa-link text-purple mr-3"></i> Custom URL Order Form
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 4 & jQuery Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- JapaLink Application Modules -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
